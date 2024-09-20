@@ -30,7 +30,8 @@ const Confirmacion = () => {
                 email: email,
                 dish: dish,
                 response: 'asistire',
-                number_of_people: numGuests
+                number_of_people: numGuests,
+                special_peticion: specialRequests
             };
 
             try {
