@@ -11,7 +11,7 @@ const Confirmacion = () => {
     const [lastName, setLastName] = useState('');
     const [phone, setPhone] = useState('');
     const [numGuests, setNumGuests] = useState(1);
-    const [dish, setDish] = useState('pollo');
+    // const [dish, setDish] = useState('pollo');
     const [specialRequests, setSpecialRequests] = useState('');
     const [attending, setAttending] = useState(null);
     const [showMesa, setShowMesa] = useState(false);
@@ -28,7 +28,7 @@ const Confirmacion = () => {
                 lastname: lastName,
                 phone: phone,
                 email: email,
-                dish: dish,
+                // dish: dish,
                 response: 'asistire',
                 number_of_people: numGuests,
                 special_peticion: specialRequests
@@ -220,7 +220,7 @@ const Confirmacion = () => {
                                     required
                                 />
                             </div>
-                            <div className="mb-4 flex space-x-4">
+                            {/* <div className="mb-4 flex space-x-4">
                                 <div className="flex-1">
                                     <label className="block text-lg font-medium mb-2">Plato a servirse</label>
                                     <select
@@ -233,7 +233,7 @@ const Confirmacion = () => {
                                         <option value="res">Res</option>
                                     </select>
                                 </div>
-                            </div>
+                            </div> */}
                             <div className="mb-4">
                                 <label className="block text-lg font-medium mb-2">Peticiones especiales</label>
                                 <textarea
