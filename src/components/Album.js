@@ -85,7 +85,7 @@ const Album = ({ onClose }) => {
                     displayedImages.map((image, index) => (
                         <div key={image.id} className="relative">
                             <img
-                                src={`${API_URL}${image.image_path}`}
+                                src={`https://maniscode.online${image.image_path}`} 
                                 alt="Recuerdo"
                                 className="w-full h-48 object-cover rounded-lg cursor-pointer transition-transform transform hover:scale-105"
                                 onClick={() => handleImageClick(startIndex + index)}
@@ -124,7 +124,7 @@ const Album = ({ onClose }) => {
                     onTouchStart={handleSwipe}
                 >
                     <img
-                        src={`${API_URL}${images[selectedImageIndex].image_path}`}
+                        src={`https://maniscode.online${images[selectedImageIndex].image_path}`}
                         alt="Imagen ampliada"
                         className="max-w-full max-h-screen cursor-pointer"
                         onClick={handleCloseFullscreen}
