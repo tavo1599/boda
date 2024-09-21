@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
+import { API_URL } from './env';
 
 const Album = ({ onClose }) => {
     const [images, setImages] = useState([]);
@@ -10,7 +11,7 @@ const Album = ({ onClose }) => {
     useEffect(() => {
         const fetchImages = async () => {
             try {
-                const response = await axios.get('http://localhost:8000/api/images');
+                const response = await axios.get(`${API_URL}/images`);
                 console.log('Fetched images:', response.data);
                 setImages(response.data);
             } catch (error) {
@@ -84,7 +85,7 @@ const Album = ({ onClose }) => {
                     displayedImages.map((image, index) => (
                         <div key={image.id} className="relative">
                             <img
-                                src={`http://localhost:8000${image.image_path}`}
+                                src={`${API_URL}${image.image_path}`}
                                 alt="Recuerdo"
                                 className="w-full h-48 object-cover rounded-lg cursor-pointer transition-transform transform hover:scale-105"
                                 onClick={() => handleImageClick(startIndex + index)}
@@ -123,7 +124,7 @@ const Album = ({ onClose }) => {
                     onTouchStart={handleSwipe}
                 >
                     <img
-                        src={`http://localhost:8000${images[selectedImageIndex].image_path}`}
+                        src={`${API_URL}${images[selectedImageIndex].image_path}`}
                         alt="Imagen ampliada"
                         className="max-w-full max-h-screen cursor-pointer"
                         onClick={handleCloseFullscreen}

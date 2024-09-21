@@ -2,6 +2,7 @@ import React, { useState, useRef } from 'react';
 import axios from 'axios';
 import Swal from 'sweetalert2';
 import Album from './Album';
+import { API_URL } from './env';
 
 const Recuerdo = () => {
     const [comment, setComment] = useState('');
@@ -37,7 +38,7 @@ const Recuerdo = () => {
         formData.append('comment', comment);
 
         try {
-            const response = await axios.post('http://localhost:8000/api/images', formData, {
+            const response = await axios.post(`${API_URL}/images`, formData, {
                 headers: {
                     'Content-Type': 'multipart/form-data',
                 },
