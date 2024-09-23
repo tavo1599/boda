@@ -219,6 +219,7 @@ const Confirmacion = () => {
                                     className="w-full p-2 border border-gray-300 rounded bg-neutral-700"
                                     required
                                 />
+                                <p className="text-sm text-gray-400 mt-1">Máximo 8 personas por mesa.</p>
                             </div>
                             {/* <div className="mb-4 flex space-x-4">
                                 <div className="flex-1">
